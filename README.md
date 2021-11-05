@@ -27,43 +27,36 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## -------------------------- IAS training Requirements  -  Angular technician  
- - Realizar el frontend para un CRUD de technician, utilizando los componentes ya establecidos en el artefacto.
-    campos del técnico:
-		- technician ID: valor requerido.
-		- name: valor requerido, no permite caracteres especiales.
-		- lastName: valor requerido, no permite caracteres especiales.
- - Mostrar en una lista todos los técnicos creados.
- - Crear una nueva rama con la siguiente estructura "feature/primerNombre-primerApellido"
+ - Create a frontend for a Technician (CRUD), use components already created.
+    form fields:
+		- TechnicianId: Required.
+		- name: Required, without special characters, max 40 characters.
+		- lastName: Required, without special characters, max 40 characters.
+ - Show all Technicians in a list.
+ - Create a branch with the follow structure "feature/firstName-firstLastName"
 ## -------------------------- STEPS for basic flow  ------------------
 
 ## STEP-1
- - La ruta "localhost:4200/technician" debe de mostrar la información del componente "TechnicianComponent" 
- - Agregar los campos del modelo del technician en la interface "TechnicianModel"
+ - Create main route "localhost:4200/technician" should be for the component "TechnicianComponent" 
+ - Create interface "TechnicianModel" with all technician's attributes
 ## STEP-2
- - En el componente "FormTechnicianComponent" se debe de crear los campos del formulario utilizando "Reactiveform"
- - Agregar mensaje infomartivo sobre los errores del campo.
+ - Create form in "FormTechnicianComponent" - should be with "Reactiveform"
+ - Add validation of fields.
 ## STEP-3
- - En el servicio "TechnicianService" se deben de agregar los métodos crear, eliminar, actualizar y dos consultas 
-	(una con ID para un técnico en especifico y otras sin id para consultar la lista). donde la URL de petición será "URL-petición/technician"
+ - Create CRUD request in the service "TechnicianService" with a aditional query for a specific Technician for ID
 ## STEP 4
- - En el componente "TechnicianComponent" se debe de obtener los datos del formulario al darle click en el botón guardar del componente "FormTechnicianComponent", 
-	si este se encuentra valido.
- - Al recibir la información del formulario, se debe de llamar al metodo crear del servicio "TechnicianService" y si mostrar una alerta informando el resultado de la petición.
-
+ - Get values of the form in "TechnicianComponent" when the event click is execute in the form "FormTechnicianComponent", if this form is valid.
+ - When you get the values of the form, should call the methods of the service "TechnicianService", show an alert with the answer for the service.
  
  ## -------------------------- Topics to evaluate ---------------------
  
-  - buenas practicas, apoyarse del SonarLint
-     - guia de instalación https://labs.ias.com.co/docs/guides/sonarlint/vscode
-	 - enlace de credenciales de sonarLint de IAS https://labs.ias.com.co/docs/guides/sonarlint/sonarias
-  - funcionalidad de la aplicación (cumpliendo los requerimientos
+  - Coding best practices
+  - Entire functionality (requirements)
+  - unit test 80% coverage.
 
  ## ------------------------- supporting documentation ---------------------
  
-     reactiveForms: https://angular.io/guide/reactive-forms
+   reactiveForms: https://angular.io/guide/reactive-forms
 	 routes: https://angular.io/guide/router
 	 httpClient: https://angular.io/guide/http
 	 
-	 
- 
- 
